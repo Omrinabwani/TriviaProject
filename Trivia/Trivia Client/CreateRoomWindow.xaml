@@ -1,0 +1,29 @@
+﻿<Window x:Class="Wpf_learning.CreateRoomWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wpf_learning"
+        mc:Ignorable="d"
+        Title="CreateRoomWindow" Height="450" Width="800">
+
+    <Border Background= "DarkSlateBlue" CornerRadius="15" Padding="30" Margin="20">
+        <Grid>
+            <Button Content= "⟵ Back" Click="GetBackFunction" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Padding= "6" Background = "DarkCyan" Foreground="DarkGray" FontWeight="Bold" Margin="0,0,0,10"/>
+            <StackPanel Margin="20" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock Text= "🌊 Create Room" FontSize="28" FontWeight="Bold" Foreground="White" HorizontalAlignment= "Center" Margin="0,0,0,20"/>
+                <TextBlock Text= "Room Name:" Foreground="White" FontSize ="16"/>
+                <TextBox Name ="RoomNameInput" Background ="LightBlue" BorderBrush ="Transparent" FontSize ="16" Padding = "8" Margin = "0,0,0,15"/>
+                <TextBlock Text="Number Of Players:" Foreground="White" FontSize="14"/>
+                <TextBox Name ="NumOfPlayersInput" Background ="LightBlue" BorderBrush ="Transparent" FontSize ="16" Padding = "8" Margin = "0,0,0,15"/>
+                <TextBlock Text="Number Of Questions:" Foreground="White" FontSize="14"/>
+                <TextBox Name= "NumOfQuestionsInput" Background="LightBlue" BorderBrush="Transparent" FontSize="16" Padding="8" Margin="0,0,0,25"/>
+                <TextBlock Text="Time Per Question (seconds):" Foreground="White" FontSize="14"/>
+                <TextBox Name = "TimeInput" Background="LightBlue" BorderBrush="Transparent" FontSize="16" Padding="8" Margin="0,0,0,25"/>
+                <Button Content= "🛠️ Create Room" Click="CreateRoomFunction" Width="100" Padding= "6" Background = "DarkCyan" Foreground="DarkGray" FontWeight="Bold" Margin="0,0,0,10"/>
+                <TextBlock Name ="ServerResponse" FontSize= "16" Foreground= "DarkGray"/>
+            </StackPanel>
+        </Grid>
+    </Border>
+
+</Window>

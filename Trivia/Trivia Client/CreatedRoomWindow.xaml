@@ -1,0 +1,63 @@
+﻿<Window x:Class="Wpf_learning.CreatedRoomWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Room Lobby"
+        Height="500"
+        Width="800"
+        WindowStartupLocation="CenterScreen"
+        Background="#002B36">
+
+    <Border Background="DarkSlateBlue" CornerRadius="20" Padding="30" Margin="20">
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="400">
+
+            <TextBlock Text="🏝️ Room Lobby"
+                       FontSize="30"
+                       FontWeight="Bold"
+                       Foreground="White"
+                       HorizontalAlignment="Center"
+                       Margin="0,0,0,30"/>
+            <TextBlock Text="🌊 Active Players:"
+                       FontSize="18"
+                       Foreground="White"
+                       Margin="0,0,0,10"
+                       HorizontalAlignment="Left"/>
+
+
+            <StackPanel x:Name="PlayerStackPanel" Background="LightBlue" Margin="0,0,0,30">
+                
+            </StackPanel>
+
+            <Button x:Name="StartGameButton" 
+                Content="🎮 Start Game"
+                    Click="StartGameFunction"
+                    Width="200"
+                    Padding="10"
+                    Background="DarkCyan"
+                    Foreground="White"
+                    FontWeight="Bold"
+                    Margin="0,0,0,15"
+                    BorderThickness="0"/>
+
+            <Button x:Name="CloseRoomButton"
+                    Content="❌ Close Room"
+                    Click="CloseRoomFunction"
+                    Width="200"
+                    Padding="10"
+                    Background="Red"
+                    Foreground="White"
+                    FontWeight="Bold"
+                    BorderThickness="0"/>
+        <Button x:Name="LeaveRoomButton"
+        Content="🚪 Leave Room"
+        Click="LeaveRoomFunction"
+        Width="200"
+        Padding="10"
+        Background="DarkOrange"
+        Foreground="White"
+        FontWeight="Bold"
+        BorderThickness="0"/>
+            
+            <TextBlock Name ="ServerResponse" FontSize= "16" Foreground= "DarkGray"/>
+        </StackPanel>
+    </Border>
+</Window>

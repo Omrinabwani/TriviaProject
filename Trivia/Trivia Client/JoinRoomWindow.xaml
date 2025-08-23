@@ -1,0 +1,58 @@
+﻿<Window x:Class="Wpf_learning.JoinRoomWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Join Room"
+        Height="500"
+        Width="800"
+        WindowStartupLocation="CenterScreen">
+
+    <Border Background="DarkSlateBlue" CornerRadius="15" Padding="30" Margin="20">
+        <Grid>
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="500">
+
+                <TextBlock Text="🧜‍♂️ Available Rooms"
+                           FontSize="28"
+                           FontWeight="Bold"
+                           Foreground="White"
+                           HorizontalAlignment="Center"
+                           Margin="0,0,0,20"/>
+
+                
+                <ListBox x:Name="RoomsListBox"
+         Background="White"
+         FontSize="16"
+         Height="250"
+         Margin="0,0,0,20"/>
+
+                
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button Content="➡️ Join Selected"
+                            Click="JoinSelectedRoom"
+                            Width="150"
+                            Padding="6"
+                            Background="DarkCyan"
+                            Foreground="DarkGray"
+                            FontWeight="Bold"
+                            Margin="10,0"/>
+
+                    <Button Content="🔙 Back"
+                            Click="GetBackFunction"
+                            Width="100"
+                            Padding="6"
+                            Background="IndianRed"
+                            Foreground="White"
+                            FontWeight="Bold"
+                            Margin="10,0"/>
+                </StackPanel>
+
+                <TextBlock Name="JoinRoomResponse"
+                           Text=""
+                           Foreground="LightCoral"
+                           FontSize="14"
+                           FontWeight="Bold"
+                           TextAlignment="Center"
+                           Margin="0,10"/>
+            </StackPanel>
+        </Grid>
+    </Border>
+</Window>
